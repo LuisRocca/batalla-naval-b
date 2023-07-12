@@ -1,0 +1,79 @@
+@import "./variables";
+
+.Matriz {
+  max-width: 30vw;
+  margin: auto;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."; 
+}
+
+.Tile {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgb(182, 115, 115);
+  &.checked {
+    background-color: #1ec21ec4;
+  }
+
+  &.checked:hover {
+    background-color: $redDescarte;
+    
+  }
+  &.checked::before {
+    font-family: "Font Awesome 5 Free"; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  cursor: pointer;
+}
+.Home {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.titlle {
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(187, 90, 90);
+  margin-bottom: 40px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.Button {
+  
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  margin-left: 100px;
+}
+
+.icon-lr {
+  height: 20px;
+}
+.borrado-gestios {
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(187, 90, 90);
+  border: 1px solid rgb(182, 115, 115);
+  border-radius: 5px;
+  padding: 5px;
+  width: 90px;
+  
+}
+.borrado-gestios:hover {
+  background-color: $redDescarte;
+}
