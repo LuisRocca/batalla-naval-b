@@ -1,14 +1,9 @@
 // react
-import React from 'react';
+import React from "react";
 // third-party
-import Document, {
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import Document, { Head, Html, Main, NextScript } from "next/document";
 // application
-import { baseUrl } from './../helpers/utils';
+import { baseUrl } from "./../helpers/utils";
 
 class MyDocument extends Document {
   render() {
@@ -16,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang={"ES"}>
         <Head>
-          <link rel="shortcut icon" href={baseUrl('favicon.ico')} />
+          <link rel="shortcut icon" href={baseUrl("favicon.ico")} />
           {/* fonts */}
           <link rel="stylesheet" href="/fonts/fonts.css" />
           <script
@@ -24,7 +19,6 @@ class MyDocument extends Document {
             src={`https://www.googletagmanager.com/gtag/js?id=G-${googleCode}`}
           />
           <script
-          
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -34,10 +28,9 @@ class MyDocument extends Document {
             `,
             }}
           />
-          
         </Head>
         <body>
-          { /* analytics HERE */}
+          {/* analytics HERE */}
           <div className="site-preloader">
             <style
               dangerouslySetInnerHTML={{

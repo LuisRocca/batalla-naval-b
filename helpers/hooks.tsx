@@ -24,7 +24,6 @@ function handleResize() {
   }
 }
 export const WithResponsiveHook = (Component) => {
-  console.log('exc')
   return (props) => {
     const [responsive, setResponsive] = useState(responsiveValue); // eslint-disable-line
     useEffect(() => {
