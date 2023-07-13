@@ -30,6 +30,7 @@ const Tile = ({ checked, id }: TileProps) => {
   };
 
   useEffect(() => {
+    
     const checkedTiles = document.querySelectorAll(".Tile.checked");
     if (checkedTiles.length > 0 && checkedTiles.length <= 4) {
       checkedTiles.forEach((e) => {
@@ -44,17 +45,22 @@ const Tile = ({ checked, id }: TileProps) => {
         for (let i = 1; i < arrayValidator.length; i++) {
           if (arrayValidator[i - 1] + 1 === arrayValidator[i]) {
             validateSequence(arrayValidator);
+            break
           } else if (arrayValidator[i - 1] + 8 === arrayValidator[i]) {
             validateSequence(arrayValidator);
+            break
           } else if (arrayValidator[i - 1] + 9 === arrayValidator[i]) {
             validateSequence(arrayValidator);
+            break
           } else if (arrayValidator[i - 1] + 7 === arrayValidator[i]) {
             validateSequence(arrayValidator);
+            break
           } else {
             setIsValidator(false);
             alert(
               "Solo puedes escribir lineas horizontales, verticales o diagonales S; tiene que ser una seguidilla para poder avanzar"
             );
+            break
           }
         }
       });
@@ -67,7 +73,7 @@ const Tile = ({ checked, id }: TileProps) => {
       <div className={`Tile checked`} onClick={handleClick} id={`${id}`}></div>
     );
   } else {
-    return <div className={`Tile`} onClick={handleClick}></div>;
+    return <div className={`Tile`} onClick={handleClick} id={`${id}`} ></div>;
   }
 };
 export default Tile;

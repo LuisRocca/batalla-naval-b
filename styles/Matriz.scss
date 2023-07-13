@@ -37,6 +37,12 @@
   }
   cursor: pointer;
 }
+.buttonRotate {
+ display: flex;
+ flex-direction: row;
+    justify-content: center;
+    margin-right: 101px;
+}
 .Home {
   margin-top: 40px;
   margin-bottom: 50px;
@@ -64,8 +70,23 @@
 .icon-lr {
   height: 20px;
 }
+.Rotate-button {
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(85, 204, 61);
+  border: 1px solid rgb(51, 177, 26);
+  border-radius: 5px;
+  padding: 5px;
+  width: 150px;
+}
+
+.Rotate-button:hover {
+  background-color: rgb(46, 230, 21);
+}
+
 .borrado-gestios {
   cursor: pointer;
+  margin-top: 10px;
   text-align: center;
   background-color: rgb(187, 90, 90);
   border: 1px solid rgb(182, 115, 115);

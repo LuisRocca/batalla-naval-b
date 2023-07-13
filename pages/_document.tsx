@@ -24,6 +24,7 @@ class MyDocument extends Document {
             src={`https://www.googletagmanager.com/gtag/js?id=G-${googleCode}`}
           />
           <script
+          
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -33,6 +34,7 @@ class MyDocument extends Document {
             `,
             }}
           />
+          
         </Head>
         <body>
           { /* analytics HERE */}
